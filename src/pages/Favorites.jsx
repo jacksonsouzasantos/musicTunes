@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from '../components/Header';
 import MusicCard from '../components/MusicCard';
+import { getFavoriteSongs } from '../services/favoriteSongsAPI';
 
 class Favorites extends React.Component {
   constructor() {
@@ -10,6 +11,21 @@ class Favorites extends React.Component {
       favoriteMusics: [],
     };
   }
+
+  componentDidMount() {
+    this.getFavorites();
+  }
+
+  componentDidUpdate() {
+    this.getFavorites();
+  }
+
+  getFavorites = async () => {
+    const favorites = await getFavoriteSongs();
+    this.setState({
+      favoriteMusics: [...favorites],
+    });
+  };
 
   render() {
     const { favoriteMusics } = this.state;

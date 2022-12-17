@@ -16,6 +16,13 @@ class Login extends React.Component {
     };
   }
 
+  onInputChange({ target }) {
+    const { value } = target;
+    this.setState({
+      name: value,
+    });
+  }
+
   async submitLogin(event) {
     event.preventDefault();
     this.setState({
