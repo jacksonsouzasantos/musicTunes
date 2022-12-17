@@ -24,14 +24,16 @@ class Profile extends Component {
   };
 
   render() {
-    const { isLoading, userData: { description } } = this.state;
+    const { isLoading, userData: { name, description, image, email } } = this.state;
     return (
       <div data-testid="page-profile">
         <Header />
         { isLoading ? <Loading /> : (
           <div>
             <Link to="/profile/edit">Editar perfil</Link>
-
+            <h3>{ name }</h3>
+            <img src={ image } alt={ `User ${name}` } data-testid="profile-image" />
+            <p>{ email }</p>
             <p>{ description }</p>
           </div>) }
       </div>

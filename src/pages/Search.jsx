@@ -34,6 +34,7 @@ class Search extends React.Component {
       curSearch: search,
     });
     const result = await searchAlbumsAPI(search);
+
     if (result.length > 0) {
       this.setState({
         search: '',
