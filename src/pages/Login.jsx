@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { createUser } from '../services/userAPI';
 import Loading from '../components/Loading';
+import '../styles/Login.css';
 
 class Login extends React.Component {
   constructor() {
@@ -38,12 +39,13 @@ class Login extends React.Component {
     const minNameLegth = 3;
 
     return (
-      <div data-testid="page-login">
+      <main data-testid="page-login" className="login-main">
         { loading ? <Loading /> : (
-          <form onSubmit={ (event) => this.submitLogin(event) }>
+          <form className="login-form" onSubmit={ (event) => this.submitLogin(event) }>
             <label htmlFor="login">
               Login
               <input
+                className="input-text"
                 type="text"
                 id="login"
                 placeholder="Nome"
@@ -53,6 +55,7 @@ class Login extends React.Component {
               />
             </label>
             <button
+              className="login-button"
               type="submit"
               id="enter-button"
               disabled={ name.length < minNameLegth }
@@ -62,7 +65,7 @@ class Login extends React.Component {
             </button>
           </form>
         )}
-      </div>
+      </main>
     );
   }
 }

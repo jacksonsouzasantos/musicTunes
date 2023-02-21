@@ -1,0 +1,87 @@
+.login-main {
+	align-items: center;
+	background: var(--bg-color);
+	color: var(--color-primary);
+	display: flex;
+	flex-direction: column;
+	font-size: 1.5em;
+	height: 100vh;
+	justify-content: center;
+	width: 100vw;
+}
+
+.login-form {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	width: 40%;
+}
+
+.input-text {
+	background-color: var(--color-primary);
+	border-radius: 5px;
+	border-style: none;
+	color: var(--input-color);
+	font-weight: 700;
+	height: 1.5em;
+	letter-spacing: 2px;
+	padding: 0.5em;
+	text-align: center;
+	width: 100%;
+}
+
+.login-button {
+	background-color: var(--button-bg);
+	border-radius: 5px;
+	color: var(--color-primary);
+	font-weight: 700;
+	height: 2.5em;
+	margin: 1em 0;
+	width: 100px;
+}
+
+
+.login-button:disabled {
+	background-color: var(--button-disabled);
+}
+
+.login-button:not([ disabled]):hover {
+	background-color: var(--button-hover);
+	transform: scale(1.03);
+}
+
+:root {
+
+	--input-color: rgb(78, 0, 68);
+
+	--button-bg: #901d72;
+
+	--button-disabled: #d890b8;
+
+	--button-hover: #8a1b6c;
+
+	--color-primary: white;
+
+	--color-secundary: #c4a8a8a1;
+
+}
+
+
+body {
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: 100vh;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
