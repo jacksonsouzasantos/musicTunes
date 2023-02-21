@@ -1,4 +1,4 @@
-.search-section {
+.searchsection {
     align-items: center;
     display: flex;
     flex-direction: column;
@@ -33,3 +33,25 @@
     background-color: var(--button-disabled);
   }
   
+  .page-title {
+    margin-top: 10px;
+    align-items: center;
+    background-color: var(--color-secundary);
+    border-radius: 10px;
+    color: var(--input-color);
+    display: flex;
+    flex-direction: column;
+    height: 50px;
+    justify-content: center;
+    width: 150px;
+  }
+
+  .songs-container {
+    align-items: center;
+    flex-direction: column;
+    height: 50%;
+    display: flex;
+    width: 70%;
+    margin: 0 auto;
+    margin: 0 auto; 
+  }

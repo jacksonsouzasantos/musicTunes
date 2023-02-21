@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import Loading from '../components/Loading';
 import searchAlbumsAPI from '../services/searchAlbumsAPI';
+import '../styles/Search.css';
 
 class Search extends React.Component {
   state = {
@@ -71,15 +72,16 @@ class Search extends React.Component {
               </p>
             )
               : (
-                <div>
+                <div className="page-album">
                   {`Resultado de álbuns de: ${prevSearch}`}
                   { albums.map(({ collectionId, collectionName, artworkUrl100 }) => (
-                    <div key={ collectionId }>
+                    <div key={ collectionId } className="songs-container">
                       <p>{ collectionName }</p>
                       <img src={ artworkUrl100 } alt={ collectionName } />
                       <Link
                         to={ `/album/${collectionId}` }
                         data-testid={ `link-to-album-${collectionId}` }
+                        className="page-title"
                       >
                         Visualização
                       </Link>
