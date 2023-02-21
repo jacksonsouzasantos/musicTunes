@@ -44,7 +44,7 @@ class Search extends React.Component {
         <Header />
         <div data-testid="page-search" className="page">
           <form className="searchForm">
-            <label htmlFor="searchInput">
+            <label htmlFor="searchInput" className="searchInput">
               <input
                 className="input-text"
                 data-testid="search-artist-input"

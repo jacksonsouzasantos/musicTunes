@@ -1,10 +1,17 @@
 .header-section {
     align-items: center;
-    color: var(--color-primary);
     display: flex;
     height: 80px;
     justify-content: space-between;
     padding: 1em 6em;
+  }
+
+  .render-login-name{
+    position: absolute;
+    margin: 45px;
+    padding-top: 10px;
+    display: flex;
+    color: blue;
   }
   
   .nav-bar {
@@ -12,10 +19,10 @@
   }
   
   .nav-link {
-    color: var(--color-primary);
     font-size: 1.5em;
     margin-left: 1em;
     padding: 0.5em;
+    text-decoration: none;
   }
   
   .nav-link:hover {
@@ -23,3 +30,4 @@
     border-radius: 25px;
   }
   
+  a:link {text-decoration: none;}

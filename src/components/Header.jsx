@@ -37,7 +37,10 @@ class Header extends React.Component {
             <div>
               <section>
                 <div data-testid="header-user-name" className="render-login-name">
+                  Olá
+                  <br />
                   { name }
+
                 </div>
               </section>
               <section className="nav-bar">

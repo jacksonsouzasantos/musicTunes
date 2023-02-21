@@ -1,0 +1,38 @@
+.favorites-container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+  
+  .favorites {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 2em 0;
+  }
+  
+  .song-infos {
+    align-items: center;
+    display: flex;
+  }
+  
+  .song-infos img {
+    border-radius: 50px;
+    width: 100px;
+  }
+  
+  .track-player {
+    margin: 0 1.5em;
+  }
+  
+  .favorites label {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .favorites input {
+    margin-left: 1em;
+  }
+  

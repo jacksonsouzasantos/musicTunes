@@ -1,0 +1,35 @@
+.page-album {
+    min-height: 100%;
+  }
+
+  .artist{
+    text-align: center;
+    text-shadow: 10cm;
+  }
+
+  .album{
+    text-align: center;
+    text-shadow: 10cm;
+  }
+  
+  
+  ul  {
+    align-items: center;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  li{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+  }
+  
+
+  label{
+  color: rgb(0, 0, 0);
+  margin-bottom: 15px;
+  }
