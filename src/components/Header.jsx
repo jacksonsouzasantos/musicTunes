@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { getUser } from '../services/userAPI';
 import Loading from './Loading';
+import '../styles/Header.css';
 
 class Header extends React.Component {
   constructor() {
@@ -21,7 +22,6 @@ class Header extends React.Component {
 
   async userData() {
     const userObj = await getUser();
-    // console.log(userObj);
     this.setState({
       name: userObj.name,
       loading: userObj.loading,
@@ -31,23 +31,23 @@ class Header extends React.Component {
   render() {
     const { name, loading } = this.state;
     return (
-      <header data-testid="header-component">
+      <header data-testid="header-component" className="header-section">
         {(loading ? <Loading />
           : (
             <div>
               <section>
-                <div data-testid="header-user-name">
+                <div data-testid="header-user-name" className="render-login-name">
                   { name }
                 </div>
               </section>
-              <section className="header-links">
-                <div className="link-to-search">
+              <section className="nav-bar">
+                <div className="nav-link">
                   <Link to="/search" data-testid="link-to-search">Search</Link>
                 </div>
-                <div className="link-to-favorites">
+                <div className="nav-link">
                   <Link to="/favorites" data-testid="link-to-favorites">Favorites</Link>
                 </div>
-                <div className="link-to-profile">
+                <div className="nav-link">
                   <Link to="/profile" data-testid="link-to-profile">Profile</Link>
                 </div>
               </section>

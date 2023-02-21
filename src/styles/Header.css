@@ -1,0 +1,25 @@
+.header-section {
+    align-items: center;
+    color: var(--color-primary);
+    display: flex;
+    height: 80px;
+    justify-content: space-between;
+    padding: 1em 6em;
+  }
+  
+  .nav-bar {
+    display: flex;
+  }
+  
+  .nav-link {
+    color: var(--color-primary);
+    font-size: 1.5em;
+    margin-left: 1em;
+    padding: 0.5em;
+  }
+  
+  .nav-link:hover {
+    background-color: var(--button-bg);
+    border-radius: 25px;
+  }
+  

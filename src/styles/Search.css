@@ -1,0 +1,35 @@
+.search-section {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+  }
+  
+  .searchForm {
+    align-items: center;
+    border-radius: 20px;
+    display: flex;
+    height: 80px;
+    justify-content: center;
+    width: 90%;
+  }
+  
+  .searchForm .input-text {
+    background-color: rgb(236, 226, 235);
+  }
+  
+  .search-button {
+    background-color: var(--button-bg);
+    border-radius: 5px;
+    color: var(--color-primary);
+    font-weight: 700;
+    height: 2.5em;
+    margin-left: 1.5em;
+    width: 100px;
+  }
+  
+  .search-button:disabled {
+    background-color: var(--button-disabled);
+  }
+  
