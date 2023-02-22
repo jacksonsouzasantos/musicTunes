@@ -9,6 +9,9 @@
 	justify-content: center;
 	width: 100vw;
 }
+.login-icon {
+	width: 180px;
+  }
 
 .login-form {
 	align-items: center;

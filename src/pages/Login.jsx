@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { createUser } from '../services/userAPI';
 import Loading from '../components/Loading';
 import '../styles/Login.css';
+import fone from '../imagens/fone.png';
 
 class Login extends React.Component {
   constructor() {
@@ -42,6 +43,7 @@ class Login extends React.Component {
       <main data-testid="page-login" className="login-main">
         { loading ? <Loading /> : (
           <form className="login-form" onSubmit={ (event) => this.submitLogin(event) }>
+            <img src={ fone } alt="audio icon" className="login-icon" />
             <label htmlFor="login">
               Login
               <input

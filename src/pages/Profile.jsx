@@ -3,39 +3,68 @@ import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import Loading from '../components/Loading';
 import { getUser } from '../services/userAPI';
+import blankProfile from '../imagens/blank-profile.png';
+import '../styles/Profile.css';
 
 class Profile extends Component {
   constructor() {
     super();
-
     this.state = {
+      loading: false,
       userData: {},
-      isLoading: true,
     };
   }
 
   componentDidMount() {
-    this.importUserData();
+    this.fetchUser();
   }
 
-  importUserData = async () => {
-    const userData = await getUser();
-    this.setState({ isLoading: false, userData });
+  fetchUser = async () => {
+    this.setState({
+      loading: true,
+    }, async () => {
+      const userData = await getUser();
+      this.setState({
+        loading: false,
+        userData,
+      });
+    });
   };
 
   render() {
-    const { isLoading, userData: { name, description, image, email } } = this.state;
+    const { loading, userData } = this.state;
+    const { name, email, description } = userData;
     return (
       <div data-testid="page-profile">
         <Header />
-        { isLoading ? <Loading /> : (
-          <div>
-            <Link to="/profile/edit">Editar perfil</Link>
-            <h3>{ name }</h3>
-            <img src={ image } alt={ `User ${name}` } data-testid="profile-image" />
-            <p>{ email }</p>
-            <p>{ description }</p>
-          </div>) }
+        {loading
+          ? (<Loading />)
+          : (
+            <div className="profile-container">
+              <div className="profile-section">
+                <h2>{ name }</h2>
+                <img
+                  data-testid="profile-image"
+                  className="profile-image"
+                  src={ blankProfile }
+                  alt={ name }
+                />
+                <h3>
+                  E-mail:
+                  {' '}
+                  { email }
+                </h3>
+                <h3>
+                  Description:
+                  {' '}
+                  { description }
+                </h3>
+                <Link to="/profile/edit">
+                  <p className="edit-button">Edit profile</p>
+                </Link>
+              </div>
+            </div>
+          )}
       </div>
     );
   }
