@@ -17,7 +17,7 @@
 <div align="center">
   <h3 align="center">Projeto MusicTunes</h3> </br>
   
-  ![alt text](src/images/musicTunesGif.gif)
+  ![alt text](src/imagens/musicTunesGif.gif)
 </div>
 
 ### visite o projeto em:
@@ -29,11 +29,11 @@ Solar System: https://music-tunes-iota.vercel.app/
 
 ## 💻 Sobre o Projeto 
 
-Projeto da [Trybe](https://www.betrybe.com/)- Front-End- Seção 7- Dia 3.</br>
-A proposta foi desenvolver um aplicação que exibe-se o sistema solar e as viagens espaciais utilizando o React. </br>
-Além de visualizar os planetas do sistema solar. Também exibe cards com as informações sobre missões espaciais.
+Projeto da [Trybe](https://www.betrybe.com/)- Front-End- Seção 4- Dia 3. Ciclo de Vida de Componentes e React Route</br>
+Foi desenvolvido aplicação para pesquisar e listar álbuns e músicas de várias bandas e artistas. Será possível até mesmo ouvir o preview de cada música. Além disso, você também poderá favoritar suas músicas preferidas. </br>
 
-
+## 🧰 🛠️
+OBs: Melhorias a serem atualizadas css.
 
 
 ## 🛠️ Construido com as tecnologias 
@@ -43,6 +43,8 @@ Tecnologias utilizadas no desenvolvimento desse projeto.
 <div>
 <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB"/> 
 </br>
+<img src="https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white"/> 
+</br>
 <img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E"/> 
 </br>
 <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white"/> 
@@ -51,6 +53,9 @@ Tecnologias utilizadas no desenvolvimento desse projeto.
 </br>
 <img src="https://img.shields.io/badge/eslint-3A33D1?style=for-the-badge&logo=eslint&logoColor=white"/> 
 </div>
+<img src="https://img.shields.io/badge/-TestingLibrary-%23E33332?style=for-the-badge&logo=testing-library&logoColor=white"/> 
+</div>
+
 
 
 
@@ -62,12 +67,12 @@ Este é um exemplo de com instruções para você configurar seu projeto localme
 ## ⬇️ Clonar o projeto
 Via SSH
 ```bash
-git clone git@github.com:jacksonsouzasantos/Solar-System.git
+git clone git@github.com:tryber/sd-027-a-project-trybetunes.git
 ```
 Via HTTPS
 
 ```bash
-git clone https://github.com/jacksonsouzasantos/Solar-System.git
+git clone https://github.com/tryber/sd-027-a-project-trybetunes.git
 ```
 
 ## ⬇️ Instalando dependências
@@ -87,20 +92,17 @@ npm start
 ## 🚀  Habilidades Aprendidas 
 Neste projeto, desenvolvi as seguintes habilidades:
 
+- Utilizar o props.children para acessar os filhos de um componente React e interagir com eles;
 
-- Criar componentes de classe em React;
-- Criar múltiplos componentes a partir de um array;
-- Fazer uso de props corretamente e de PropTypes para validá-las;
-- Utilizar corretamente o método render() para renderizar os
-  componentes.
-- Fazer composição de componentes corretamente.
-- Criar múltiplos componentes dinamicamente.
+- Utilizar o componente BrowserRouter corretamente;
 
-- Utilizar PropTypes para:
-- checar o tipo de uma prop no uso de um componente.
-- garantir a presença de props obrigatórias no uso de um componente.
-- checar que uma prop é um objeto de formato específico.
-- garantir que uma prop é um array com elementos de um determinado tipo.
+- Criar links de navegação na aplicação com o componente Link;
+
+- Criar rotas, mapeando o caminho da URL com o componente correspondente, via Route;
+
+- Estruturar e organizar as rotas da sua aplicação com o componente Switch;
+
+- Usar o componente Redirect pra alternar entre rotas.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
